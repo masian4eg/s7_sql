@@ -2,13 +2,13 @@ import sqlite3
 from os.path import isfile
 from loguru import logger
 
-sqlite_connection = sqlite3.connect('flight.db')
-cursor = sqlite_connection.cursor()
-
 
 def db_write(file_name: str, flt: int, depdate: str, dep: str):
 
     ''' внесение данных в БД '''
+
+    sqlite_connection = sqlite3.connect('flight.db')
+    cursor = sqlite_connection.cursor()
 
     # если база еще не создана - создаем
     if not isfile('flight.db'):
