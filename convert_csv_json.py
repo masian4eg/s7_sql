@@ -114,4 +114,3 @@ def convert_func():
                 logger.error(f'Ошибка {IndexError}')
 
     logger.info(f'Папка {file_source} пустая')
-    return files.clear()
