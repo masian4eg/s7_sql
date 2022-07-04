@@ -6,3 +6,5 @@ Python 3.8 + список библиотек в requirements.txt
 
 - pip install -r requirements.txt
 - python convert_csv_json.py
+
+#### В filter_flight.py SQL запрос выбыорки из таблицы flight по дате

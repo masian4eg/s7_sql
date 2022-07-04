@@ -37,6 +37,22 @@ def convert_func():
             for file in files_name:
                 try:
 
+                    # проверка наличия всех рабочих папок, если их нет - создаем
+                    path_dest_exist = os.path.exists(file_destination)
+                    if not path_dest_exist:
+                        os.makedirs(file_destination)
+                        logger.info(f'Папка {file_destination} создана')
+
+                    path_err_exist = os.path.exists(file_error)
+                    if not path_err_exist:
+                        os.makedirs(file_error)
+                        logger.info(f'Папка {file_error} создана')
+
+                    path_ok_exist = os.path.exists(file_ok)
+                    if not path_ok_exist:
+                        os.makedirs(file_ok)
+                        logger.info(f'Папка {file_ok} создана')
+
                     # Обработка имени файла
                     text_name_file = file.replace('.csv', '').split('_')
 
